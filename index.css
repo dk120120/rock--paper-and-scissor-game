@@ -32,3 +32,14 @@ gap:10px;
 div{
     text-align:center;
 }
+
+.score{
+    display:flex;
+    gap:160px;
+    margin:30px;
+    padding:5px;
+}
+
+span{
+    padding:10px;
+}

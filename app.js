@@ -1,5 +1,6 @@
 
-
+let computerScore = 0;
+let userScore = 0 ;
 
 let c = document.querySelector("#computer-choice");
 
@@ -30,7 +31,8 @@ c.src = b;
   });
   
   second();
-  third();
+nine(); 
+
 }
 
 
@@ -53,20 +55,23 @@ if (c.src.includes("scissor.png") && d.src.includes("paper.png")) {
 }
 }
 
+function nine(){
+  let n = document.querySelector("#result");
+  if(n.innerText === "You Lose" ){
+    computerScore++
+    console.log(computerScore)
+    document.querySelector("#computer-score").innerHTML = computerScore
+  }
 
-function third(){
-
-  document.querySelector("#rock").removeEventListener("click", first);
-  document.querySelector("#paper").removeEventListener("click", first);
-  
-  document.querySelector("#scissor").removeEventListener("click", first);
-  
-
-
-
+  if(n.innerText === "You Win"){
+    userScore++;
+    document.querySelector("#user-score").innerHTML = userScore
+  }
+ 
 }
 
 let g = document.querySelector("#play-again-button");
 g.addEventListener("click", function(){
   window.location.reload();
 })
+
